@@ -1,0 +1,7 @@
+#check open ports when the host are know
+nmap -sS 192.168.1.102
+
+# check open hosts and if searched port are open
+
+nmap -sS 192.168.1.102
+nmap -sP PT80 192.168.1.0/28
