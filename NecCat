@@ -1,3 +1,7 @@
 #NetCat Examples
 
+#Webpage file
 while true; nc -l -p #port -q1 < #webpage;done
+
+# jpg or png
+nc -l -p #port -q1 < #file.jpg
