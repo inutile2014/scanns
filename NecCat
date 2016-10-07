@@ -1,0 +1,3 @@
+#NetCat Examples
+
+while true; nc -l -p #port -q1 < #webpage;done
