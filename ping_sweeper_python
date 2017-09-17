@@ -1,0 +1,15 @@
+import ipaddress
+import sh
+
+
+user_import = raw_input('')
+
+network = ipaddress.ip_network(unicode(user_import))
+
+for i in network.hosts():
+
+    try:
+        sh.ping(i, '-c 1')
+        print i, 'is active'
+    except sh.ErrorReturnCode_1:
+        print 'no response', i
