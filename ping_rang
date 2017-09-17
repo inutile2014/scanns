@@ -12,3 +12,7 @@ if [ $? -eq 0 ]; then
 	 echo "${1}.${i} did not respond."
 	 fi
 	done
+	
+#bash scan script 2
+for ip in $(seq 1 6); do ping -c 1 10.0.3.$ip>/dev/null; [ $? -eq 0 ] && echo "10.0.3.$ip UP" || : ; done
+
