@@ -5,3 +5,15 @@ while true; nc -l -p #port -q1 < #webpage;done
 
 # jpg or png
 nc -l -p #port -q1 < #file.jpg
+
+#check if a port are open(basic)
+nc 10.1.2.33 <portnr>
+
+#listen for a port. the command belove must set on the outgoing machin
+outgoing Machin: nc	-nlvp 4444
+Linsting Machin: nc	‐nv	10.0.0.22	4444
+
+# filetransfar example
+Outgoing Machin create a file: >nc ‐nlvp 4444  > incoming.exe
+Extract the file: nc -nv 10.0.0.22 4444	 <  /usr/share/windows-­‐binaries/wget.exe
+  
