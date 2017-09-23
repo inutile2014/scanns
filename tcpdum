@@ -1,0 +1,7 @@
+#TCPDUMP are a Networksniffer which are install on most Linux destribition
+# If we wont to analyze a Networkconnection an see what the output is we can us following command
+tcpdump	‐nX	‐r password_cracking_filtered.pcap	#nx = convert in Hex code and -r are the read command
+
+#Networkconnection output whitout ASCII(-A) whit the search option tcp on the 14th line('tcp[13]=24') 
+tcpdump -A -n 'tcp[13]=24' -r  sniff.pcap
+  
