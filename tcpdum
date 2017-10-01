@@ -4,4 +4,13 @@ tcpdump	‐nX	‐r password_cracking_filtered.pcap	#nx = convert in Hex code and
 
 #Networkconnection output whitout ASCII(-A) whit the search option tcp on the 14th line('tcp[13]=24') 
 tcpdump -A -n 'tcp[13]=24' -r  sniff.pcap
+
+# sort IP&Port of a pcap file:
+tcpdump -r file.pcap | awk -F" " '{print $3}' | sort -u | head
+
+#output in HEX Format -> The outputtext are in plaintext:
+tcpdump -nX src host IP -r file.pcap 
+
+# Sort the output whit IP PORT Plaintext
+tcpdump -A -n 'tcp[13# linenuber] = 24' -r filepcap
   
